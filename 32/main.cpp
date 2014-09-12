@@ -14,9 +14,11 @@ vector<int>		getFactors(int num);
 vector<int>		getContainingDigits(int num);
 bool			check(int a, int b, int c);
 vector<int>		getDigits(int a, int b, int c);
+vector<int>		getUniqueNums(vector<int> v);
 ///////////////////////////////////////////////////////////////////////////////
 
 int main(){
+	
 	
 }
 
@@ -49,10 +51,27 @@ vector<int> getContainingDigits(int num){
 
 bool check(int a, int b, int c){
 	//Returns true if the 3 params are pandigital 1 - 9
+	vector<int> v = getDigits(a, b, c);
+	bool	isOkay = true;
+	int	numCount = 0;	
+
+	for(int i = 1; i < 10; i++){
+		numCount = 0;
+		for( int x = 0; x < v.size(); x++){
+			if(v[x] == i){
+				numCount++;
+			}	
+		}
+		if(numCount != 1){
+			isOkay = false;
+		}
+	}
+	
+	return isOkay;
 }
 
 
-vector<int>	getDigits(int a, int b, int c){
+vector<int> getDigits(int a, int b, int c){
 	vector<int> v;
 	vector<int> result;	
 
@@ -72,4 +91,10 @@ vector<int>	getDigits(int a, int b, int c){
 	}
 
 	return result;
+}
+
+
+vector<int> getUniqueNums(vector<int> v){
+	sort(v.begin(), v.end());
+	v = unique(v.begin(), v.end());
 }
