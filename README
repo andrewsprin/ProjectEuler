@@ -1,0 +1,15 @@
+This repository stores solutions and programs that generated those solutions to
+Project Euler Problems. Many of these solutions were written hastily 
+(viz. hack-y), and are not examples of good or clean code. 
+
+Most of the problems were solved using either C++ or Java, and were selected
+only for my preference for the language. The languages used were not selected
+for any sort of runtime performance, or maintability reasons (viz. valid 
+reasons).
+
+The main purpose of this repository is simply to offer the way I went about
+solving these interesing problems. 
+
+Questions and comments are welcome. :)
+
+Cheers.
